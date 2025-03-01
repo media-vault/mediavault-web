@@ -18,4 +18,10 @@ api.interceptors.request.use((config) => {
     return Promise.reject(error);
 });
 
+export const getAllMedia = () => api.get("/media");
+export const getMediaById = (id: number) => api.get(`/media/${id}`);
+export const createMedia = (media: any) => api.post("/media", media);
+export const updateMedia = (id: number, media: any) => api.put(`/media/${id}`, media);
+export const deleteMedia = (id: number) => api.delete(`/media/${id}`, { withCredentials: true });
+
 export default api;
