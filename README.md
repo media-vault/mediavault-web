@@ -1,3 +1,7 @@
+<p align="center">
+<img alt="Logo Banner" src="https://raw.githubusercontent.com/media-vault/mediavault-ux/main/MediaVault - Banner Text Solid.png?sanitize=true"/>
+</p>
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
