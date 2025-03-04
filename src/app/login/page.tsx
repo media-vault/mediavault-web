@@ -44,6 +44,10 @@ const Login = () => {
                     />
                     <button className="btn btn-primary">Login</button>
                 </form>
+                <div className="flex flex-col mt-8 space-y-4">
+                    <button className="btn btn-primary cursor-pointer" onClick={() => router.push("/")}>Back</button>
+                    <button className="btn btn-primary cursor-pointer" onClick={() => router.push("/register")}>Don't have an account?</button>
+                </div>
             </div>
         </div>
     );

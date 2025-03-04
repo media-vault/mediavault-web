@@ -110,6 +110,7 @@ const EditMovie = () => {
                 />
                 <button className="btn btn-warning w-full">Update Movie</button>
             </form>
+            <button className="btn btn-primary cursor-pointer" onClick={() => router.push("/media")}>Back</button>
         </div>
     );
 };

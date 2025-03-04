@@ -45,6 +45,10 @@ const Register = () => {
                     />
                     <button type="submit" className="btn btn-primary cursor-pointer" onClick={handleRegister}>Register</button>
                 </form>
+                <div className="flex flex-col mt-8 space-y-4">
+                    <button className="btn btn-primary cursor-pointer" onClick={() => router.push("/")}>Back</button>
+                    <button className="btn btn-primary cursor-pointer" onClick={() => router.push("/login")}>Already have an account?</button>
+                </div>
             </div>
         </div>
     );

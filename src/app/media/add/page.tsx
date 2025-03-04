@@ -101,6 +101,7 @@ const AddMovie = () => {
                 />
                 <button>Add Movie</button>
             </form>
+            <button className="btn btn-primary cursor-pointer" onClick={() => router.push("/media")}>Back</button>
         </div>
     );
 };

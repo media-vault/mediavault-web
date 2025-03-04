@@ -47,6 +47,9 @@ const Media = () => {
                 <Link href="/media/add">
                     <button className="btn btn-primary">+ Add Movie</button>
                 </Link>
+                <Link href="/">
+                    <button className="btn btn-primary">Logout</button>
+                </Link>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {mediaList.map((media) => (
