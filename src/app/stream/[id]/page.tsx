@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { getStreamUrl } from "../../../lib/api";
 import { ArrowLeft, Maximize, Minimize } from "lucide-react";
+import ProtectedRoute from "../../ProtectedRoute";
 
 const StreamPage = () => {
     const router = useRouter();
@@ -23,6 +24,7 @@ const StreamPage = () => {
     };
 
     return ( 
+        <ProtectedRoute>
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-4">
             <div className="w-full max-w-4xl">
                 <h2 className="text-3xl font-bold mb-6 text-center">Now Playing</h2>
@@ -54,6 +56,7 @@ const StreamPage = () => {
                 </div>
             </div>
         </div>
+        </ProtectedRoute>
     );
 };
 

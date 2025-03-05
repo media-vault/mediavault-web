@@ -6,6 +6,7 @@ import { getAllMedia, deleteMedia } from "../../lib/api";
 import { clearAuthToken } from "../../lib/auth";
 import { Edit, Trash2, Play, PlusCircle, LogOut } from "lucide-react";
 import toast from "react-hot-toast";
+import ProtectedRoute from "../ProtectedRoute";
 
 type Media = {
     id: number;
@@ -50,6 +51,7 @@ const Media = () => {
     };
 
     return (
+        <ProtectedRoute>
         <div className="min-h-screen bg-gray-100 p-6">
             <div className="max-w-7xl mx-auto">
                 <div className="flex justify-between items-center mb-8">
@@ -99,6 +101,7 @@ const Media = () => {
                 </div>
             </div>
         </div>
+        </ProtectedRoute>
     );
 };
 

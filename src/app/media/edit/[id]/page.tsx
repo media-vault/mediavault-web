@@ -4,6 +4,7 @@ import { useRouter, useParams } from "next/navigation";
 import { getMediaById, updateMedia } from "../../../../lib/api";
 import { ArrowLeft, Save } from "lucide-react";
 import toast from "react-hot-toast";
+import ProtectedRoute from "../../../ProtectedRoute";
 
 const EditMovie = () => {
     const router = useRouter();
@@ -50,6 +51,7 @@ const EditMovie = () => {
     };
 
     return (
+        <ProtectedRoute>
         <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="px-4 py-5 sm:p-6">
@@ -155,6 +157,7 @@ const EditMovie = () => {
                 </div>
             </div>
         </div>
+        </ProtectedRoute>
     );
 };
 
