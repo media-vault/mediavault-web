@@ -23,14 +23,14 @@ const Register = () => {
     };
 
     return (
-        <div className="flex justify-center items-center h-screen">
-            <div className="card w-96 bg-base-100 shadow-xl p-5">
-                <h2 className="text-center text-lg font-bold">Register</h2>
+        <div className="flex justify-center items-center h-screen p-4">
+            <div className="w-full max-w-md rounded-lg shadow-xl p-5">
+                <h2 className="text-center text-lg font-extrabold">Register</h2>
                 <form onSubmit={handleRegister} className="flex flex-col gap-3">
                     <input 
                         type="text"
                         placeholder="Username"
-                        className="input input-bordered"
+                        className="input input-bordered w-full"
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                         required

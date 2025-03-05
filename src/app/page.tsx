@@ -20,10 +20,10 @@ const HomePage = () => {
 
             {showButtons && (
                 <div className="flex flex-col mt-8 space-y-4">
-                    <button className="btn btn-primary w-48" onClick={() => router.push("/register")}>
+                    <button className="cursor-pointer btn bg-white text-blue-600 hover:bg-blue-100 transition-colors duration-300 py-3 rounded-lg shadow-md w-full" onClick={() => router.push("/register")}>
                         Register
                     </button>
-                    <button className="btn btn-primary w-48" onClick={() => router.push("/login")}>
+                    <button className="cursor-pointer btn bg-white text-blue-600 hover:bg-blue-100 transition-colors duration-300 py-3 rounded-lg shadow-md w-full" onClick={() => router.push("/login")}>
                         Login
                     </button>
                 </div>
