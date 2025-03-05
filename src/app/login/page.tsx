@@ -3,6 +3,7 @@ import { useState } from "react";
 import api from "../../lib/api";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
+import { setAuthToken } from "../../lib/auth";
 
 const Login = () => {
     const [username, setUsername] = useState("");
@@ -13,9 +14,15 @@ const Login = () => {
         e.preventDefault();
         try {
             const response = await api.post("/auth/login", { username, password });
-            localStorage.setItem("token", response.data.token);
+            console.log(response);
+
+            const token = response.data.accessToken;
+
+            if (token) {
+                setAuthToken(token);
+                router.push("/media");
+            }
             toast.success("Login successful!");
-            router.push("/media");
         } catch (error) {
             toast.error("Invalid credentials");
         }
