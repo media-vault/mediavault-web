@@ -16,5 +16,10 @@ api.interceptors.request.use((config) => {
 }, (error) => Promise.reject(error));
 
 export const getAllMedia = () => api.get("/media");
+export const getMediaById = (id: number) => api.get(`/media/${id}`);
+export const createMedia = (media: any) => api.post("/media", media);
+export const updateMedia = (id: number, media: any) => api.put(`/media/${id}`, media);
+export const deleteMedia = (id: number) => api.delete(`/media/${id}`);
+export const getStreamUrl = (filename: string): string => `${API_URL}/stream/${filename}`;
 
 export default api;
