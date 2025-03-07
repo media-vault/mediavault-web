@@ -8,6 +8,6 @@ export interface Media {
     coverArtUrl: string;
     genre: string;
     releaseYear: number;
-    language: String;
+    language: string;
     mediaType: MediaType;
 }

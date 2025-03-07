@@ -21,8 +21,8 @@ function App() {
             {/* Protected Routes */}
             <Route element={<ProtectedRoute />}>
                 <Route path="/media" element={<MediaPage />} />
-                <Route path="/media/edit/:id" element={<EditMediaPage />} />
                 <Route path="/media/add" element={<AddMediaPage />} />
+                <Route path="/media/edit/:id" element={<EditMediaPage />} />
                 <Route path="/stream/:id" element={<StreamPage />} />
             </Route>
 
